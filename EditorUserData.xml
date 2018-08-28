@@ -5,7 +5,7 @@
     <Autosaves>ThirtyMinutes</Autosaves>
     <FirstSession>false</FirstSession>
     <ActiveDocumentIndex>1</ActiveDocumentIndex>
-    <LastOpenScene>Data\MyFirstScene.Scene.res</LastOpenScene>
+    <LastOpenScene>Data\BasicMenu\OverlayGameObjectMenu.Scene.res</LastOpenScene>
     <StartWithLastScene>true</StartWithLastScene>
   </EditorApp>
   <Plugins>
@@ -109,6 +109,11 @@
             <NodeID>PropertiesDuality.GameObject/ShipDuality_.Ship/</NodeID>
             <NodeID>PropertiesDuality.GameObject/PlayerDuality_.Player/</NodeID>
             <NodeID>PropertiesDuality.GameObject/TextRendererDuality.Components.Renderers.TextRenderer/</NodeID>
+            <NodeID>PropertiesDuality.GameObject/LabelDuality_.Label/</NodeID>
+            <NodeID>PropertiesDuality.GameObject/ShipStatusDuality_.ShipStatus/</NodeID>
+            <NodeID>PropertiesDuality.Resources.Scene/SceneDuality.Resources.Scene/</NodeID>
+            <NodeID>PropertiesDuality.GameObject/EventMenuControllerBasicMenu.EventMenuController/</NodeID>
+            <NodeID>PropertiesDuality.GameObject/UpdateMenuControllerBasicMenu.UpdateMenuController/</NodeID>
           </ExpandedNodes>
         </ExpandState>
       </ObjectInspector>
@@ -124,14 +129,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--DockPanel configuration file. Author: Weifen Luo, all rights reserved.-->
 <!--!!! AUTOMATICALLY GENERATED FILE. DO NOT MODIFY !!!-->
-<DockPanel FormatVersion="1.0" DockLeftPortion="0.213821593376765" DockRightPortion="0.196585742399566" DockTopPortion="0.25" DockBottomPortion="0.15495867768595" ActiveDocumentPane="5" ActivePane="5">
+<DockPanel FormatVersion="1.0" DockLeftPortion="0.213821593376765" DockRightPortion="0.196585742399566" DockTopPortion="0.25" DockBottomPortion="0.131149153876427" ActiveDocumentPane="5" ActivePane="-1">
   <Contents Count="7">
     <Content ID="0" PersistString="Duality.Editor.Plugins.CamView.CamView" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
     <Content ID="1" PersistString="Duality.Editor.Plugins.ProjectView.ProjectFolderView" AutoHidePortion="0.196585742399566" IsHidden="False" IsFloat="False" />
     <Content ID="2" PersistString="Duality.Editor.Plugins.SceneView.SceneView" AutoHidePortion="0.196585742399566" IsHidden="False" IsFloat="False" />
     <Content ID="3" PersistString="Duality.Editor.Plugins.HelpAdvisor.HelpAdvisor" AutoHidePortion="0.213821593376765" IsHidden="False" IsFloat="False" />
     <Content ID="4" PersistString="Duality.Editor.Plugins.CamView.CamView" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
-    <Content ID="5" PersistString="Duality.Editor.Plugins.LogView.LogView" AutoHidePortion="0.15495867768595" IsHidden="False" IsFloat="False" />
+    <Content ID="5" PersistString="Duality.Editor.Plugins.LogView.LogView" AutoHidePortion="0.331545979273252" IsHidden="False" IsFloat="False" />
     <Content ID="6" PersistString="Duality.Editor.Plugins.ObjectInspector.ObjectInspector" AutoHidePortion="0.213821593376765" IsHidden="False" IsFloat="False" />
   </Contents>
   <Panes Count="9">
@@ -185,7 +190,7 @@
     <DockWindow ID="0" DockState="Document" ZOrderIndex="0">
       <NestedPanes Count="2">
         <Pane ID="0" RefID="4" PrevPane="-1" Alignment="Right" Proportion="0.5" />
-        <Pane ID="1" RefID="5" PrevPane="4" Alignment="Bottom" Proportion="0.375132030388013" />
+        <Pane ID="1" RefID="5" PrevPane="4" Alignment="Bottom" Proportion="0.622155839911823" />
       </NestedPanes>
     </DockWindow>
     <DockWindow ID="1" DockState="DockLeft" ZOrderIndex="1">

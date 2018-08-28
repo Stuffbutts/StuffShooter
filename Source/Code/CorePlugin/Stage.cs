@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Duality;
+﻿using Duality;
 using Duality.Components;
 using Duality.Components.Physics;
-using Duality.Components.Renderers;
-using Duality.Drawing;
+using StuffShooter.Components.Ships;
 
-namespace Duality_
+namespace StuffShooter
 {
     [RequiredComponent(typeof(RigidBody)), RequiredComponent(typeof(Transform))]
     public class Stage: Component, ICmpCollisionListener

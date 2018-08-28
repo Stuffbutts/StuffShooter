@@ -1,13 +1,9 @@
-﻿using System;
-
-using Duality;
+﻿using Duality;
 using Duality.Components;
 using Duality.Components.Physics;
-using Duality.Editor;
 using Duality.Input;
-using Duality.Resources;
 
-namespace Duality_
+namespace StuffShooter.Components.Ships
 {
     [RequiredComponent(typeof(RigidBody)), RequiredComponent(typeof(Transform))]
     public class Player : Ship, ICmpUpdatable
@@ -18,8 +14,6 @@ namespace Duality_
             Transform transform = GameObj.GetComponent<Transform>();
             RigidBody body = GameObj.GetComponent<RigidBody>();
 
-            Reload();
-
             if (BulletPrefab != null)
             {
                 if (DualityApp.Keyboard[Key.Space])
@@ -29,10 +23,14 @@ namespace Duality_
                 {
                     CanReload = false;
                     Fire(transform, body, RapidFireMultiplier);
-                } else if (DualityApp.Keyboard.KeyReleased(Key.X))
+                }
+
+                if (DualityApp.Keyboard.KeyReleased(Key.X))
                 {
                     CanReload = true;
                 }
+
+                Reload();
             }
 
             if (DualityApp.Keyboard[Key.Left] || DualityApp.Keyboard[Key.A])

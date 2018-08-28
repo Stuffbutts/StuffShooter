@@ -3,8 +3,9 @@ using Duality;
 using Duality.Components;
 using Duality.Components.Physics;
 using Duality.Resources;
+using StuffShooter.Components.Ships;
 
-namespace Duality_
+namespace StuffShooter.Controllers
 {
     [RequiredComponent(typeof(Transform)), RequiredComponent(typeof(RigidBody))]
     public class BulletController : Component, ICmpUpdatable, ICmpInitializable, ICmpCollisionListener
@@ -17,7 +18,7 @@ namespace Duality_
 
         public float Speed { get; set; } = 20f;
         public float LifeTime { get; set; } = 100f;
-        public float Damage { get; set; } = 1f;
+        public int Damage { get; set; } = 1;
         public GameObject Creator { get; set; }
         public ContentRef<Sound> Sound { get; set; }
         public ContentRef<Prefab> OnCollisionPrefab { get; set; }

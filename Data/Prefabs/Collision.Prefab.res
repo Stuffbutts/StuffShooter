@@ -24,7 +24,7 @@
         </item>
         <item dataType="Struct" type="Duality.Components.Renderers.AnimSpriteRenderer" id="873956945">
           <active dataType="Bool">true</active>
-          <animDuration dataType="Float">5</animDuration>
+          <animDuration dataType="Float">1.5</animDuration>
           <animFirstFrame dataType="Int">0</animFirstFrame>
           <animFrameCount dataType="Int">1</animFrameCount>
           <animLoopMode dataType="Enum" type="Duality.Components.Renderers.AnimSpriteRenderer+LoopMode" name="FixedSingle" value="4" />
@@ -50,16 +50,16 @@
           </rect>
           <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
           <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
-            <contentPath dataType="String">Data\explosion.Material.res</contentPath>
+            <contentPath dataType="String">Data\Sprites\explosion.Material.res</contentPath>
           </sharedMat>
           <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
         </item>
-        <item dataType="Struct" type="Duality_.Collision" id="381769185">
+        <item dataType="Struct" type="StuffShooter.Controllers.CollisionController" id="229878147">
           <_x003C_Animation_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
-            <contentPath dataType="String">Data\explosion.Material.res</contentPath>
+            <contentPath dataType="String">Data\Sprites\explosion.Material.res</contentPath>
           </_x003C_Animation_x003E_k__BackingField>
           <_x003C_Sound_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Sound]]">
-            <contentPath dataType="String">Data\360981__projectsu012__explosion7-chiptone.Sound.res</contentPath>
+            <contentPath dataType="String">Data\Sounds\360981__projectsu012__explosion7-chiptone.Sound.res</contentPath>
           </_x003C_Sound_x003E_k__BackingField>
           <active dataType="Bool">true</active>
           <gameobj dataType="ObjectRef">2313559398</gameobj>
@@ -71,14 +71,14 @@
       <header />
       <body>
         <keys dataType="Array" type="System.Object[]" id="2228916443">
-          <item dataType="Type" id="1584401046" value="Duality_.Collision" />
-          <item dataType="Type" id="3848139994" value="Duality.Components.Transform" />
-          <item dataType="Type" id="3499012918" value="Duality.Components.Renderers.AnimSpriteRenderer" />
+          <item dataType="Type" id="1584401046" value="Duality.Components.Transform" />
+          <item dataType="Type" id="3848139994" value="Duality.Components.Renderers.AnimSpriteRenderer" />
+          <item dataType="Type" id="3499012918" value="StuffShooter.Controllers.CollisionController" />
         </keys>
         <values dataType="Array" type="System.Object[]" id="1974807912">
-          <item dataType="ObjectRef">381769185</item>
           <item dataType="ObjectRef">2370836616</item>
           <item dataType="ObjectRef">873956945</item>
+          <item dataType="ObjectRef">229878147</item>
         </values>
       </body>
     </compMap>

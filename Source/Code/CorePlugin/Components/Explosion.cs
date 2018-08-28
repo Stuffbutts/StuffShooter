@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Duality;
+﻿using Duality;
 using Duality.Components;
 using Duality.Components.Renderers;
 using Duality.Resources;
 
-namespace Duality_
+namespace StuffShooter.Components
 {
     [RequiredComponent(typeof(AnimSpriteRenderer)), RequiredComponent(typeof(Transform))]
     public class Explosion : Component, ICmpUpdatable, ICmpInitializable

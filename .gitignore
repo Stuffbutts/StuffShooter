@@ -1,4 +1,5 @@
 # Post-build files
+Examples/
 Backup/
 Temp/
 Plugins/*
@@ -36,3 +37,6 @@ DDoc.chm
 DesignTimeData.dat
 DualityEditor.pdb
 DualityEditor.xml
+/Source/Code/AdamsLair.Duality.Samples.BasicMenu
+/Source/Code/AdamsLair.Duality.Samples.DynamicLighting
+/Source/Code/ChristianGreiner.Duality.Samples.UfoGame

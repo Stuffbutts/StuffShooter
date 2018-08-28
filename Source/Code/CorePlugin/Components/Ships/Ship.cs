@@ -8,21 +8,22 @@ using Duality.Components;
 using Duality.Components.Physics;
 using Duality.Editor;
 using Duality.Resources;
+using StuffShooter.Controllers;
 
-namespace Duality_
+namespace StuffShooter.Components.Ships
 {
     [RequiredComponent(typeof(RigidBody)), RequiredComponent(typeof(Transform))]
     public class Ship : Component, ICmpUpdatable, ICmpInitializable
     {
         protected float FiringDelayCounter;
         protected Vector3 FiringOffset = new Vector3(0, -40, 0);
-        protected Boolean CanReload;
-        private float _health;
-        private float _ammo;
+        protected Boolean CanReload = true;
+        private int _health;
+        private int _ammo;
         private float _reloadDelayCounter;
 
-        public float MaxAmmo { get; set; } = 10f;
-        public float Ammo => _ammo;
+        public int MaxAmmo { get; set; } = 10;
+        public int Ammo => _ammo;
         public float ReloadDelay { get; set; } = 20f;
 
         public ContentRef<Prefab> BulletPrefab { get; set; }
@@ -44,17 +45,18 @@ namespace Duality_
             set => FiringOffset.Y = value;
         }
 
-        public float MaxHealth { get; set; } = 3f;
+        public int MaxHealth { get; set; } = 3;
 
-        public float Health => _health;
+        public int Health => _health;
 
         public void OnInit(InitContext context)
         {
             _health = MaxHealth;
             _reloadDelayCounter = FiringDelayCounter;
+            _ammo = MaxAmmo;
         }
 
-        public void AddDamage(float amount)
+        public void AddDamage(int amount)
         {
             _health = _health - amount;
             Log.Game.Write($"{GameObj.FullName} health has reached {_health}");
@@ -92,7 +94,7 @@ namespace Duality_
 
                 Scene.Current.AddObject(bullet);
                 bullet.GetComponent<BulletController>().Speed = bulletController.Speed + body.LinearVelocity.Length;
-                _ammo--;
+                _ammo -= 1;
             }
         }
 
@@ -103,7 +105,7 @@ namespace Duality_
             if (!(_reloadDelayCounter > ReloadDelay) || !(_ammo < MaxAmmo) || !CanReload) return;
             _reloadDelayCounter = 0;
 
-            _ammo++;
+            _ammo += 1;
         }
 
 

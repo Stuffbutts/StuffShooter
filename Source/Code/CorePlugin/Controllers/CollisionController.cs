@@ -8,10 +8,10 @@ using Duality.Components;
 using Duality.Components.Renderers;
 using Duality.Resources;
 
-namespace Duality_
+namespace StuffShooter.Controllers
 {
     [RequiredComponent(typeof(AnimSpriteRenderer)), RequiredComponent(typeof(Transform))]
-    public class Collision : Component, ICmpInitializable, ICmpUpdatable
+    public class CollisionController : Component, ICmpInitializable, ICmpUpdatable
     {
         public ContentRef<Sound> Sound { get; set; }
         public ContentRef<Material> Animation { get; set; }

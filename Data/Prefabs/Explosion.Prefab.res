@@ -24,10 +24,10 @@
         </item>
         <item dataType="Struct" type="Duality.Components.Renderers.AnimSpriteRenderer" id="3683099021">
           <active dataType="Bool">true</active>
-          <animDuration dataType="Float">5</animDuration>
-          <animFirstFrame dataType="Int">0</animFirstFrame>
-          <animFrameCount dataType="Int">1</animFrameCount>
-          <animLoopMode dataType="Enum" type="Duality.Components.Renderers.AnimSpriteRenderer+LoopMode" name="Loop" value="1" />
+          <animDuration dataType="Float">2</animDuration>
+          <animFirstFrame dataType="Int">1</animFirstFrame>
+          <animFrameCount dataType="Int">5</animFrameCount>
+          <animLoopMode dataType="Enum" type="Duality.Components.Renderers.AnimSpriteRenderer+LoopMode" name="Once" value="0" />
           <animPaused dataType="Bool">false</animPaused>
           <animTime dataType="Float">0</animTime>
           <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
@@ -50,17 +50,17 @@
           </rect>
           <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
           <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
-            <contentPath dataType="String">Default:Material:DualityIcon</contentPath>
+            <contentPath dataType="String">Data\Sprites\explosion.Material.res</contentPath>
           </sharedMat>
           <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
         </item>
-        <item dataType="Struct" type="Duality_.Explosion" id="2081566004">
+        <item dataType="Struct" type="StuffShooter.Components.Explosion" id="180958731">
           <_renderer />
           <_x003C_Animation_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
-            <contentPath dataType="String">Data\explosion.Material.res</contentPath>
+            <contentPath dataType="String">Data\Sprites\explosion.Material.res</contentPath>
           </_x003C_Animation_x003E_k__BackingField>
           <_x003C_Sound_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Sound]]">
-            <contentPath dataType="String">Data\360982__projectsu012__explosion8-chiptone.Sound.res</contentPath>
+            <contentPath dataType="String">Data\Sounds\360982__projectsu012__explosion8-chiptone.Sound.res</contentPath>
           </_x003C_Sound_x003E_k__BackingField>
           <active dataType="Bool">true</active>
           <gameobj dataType="ObjectRef">827734178</gameobj>
@@ -74,12 +74,12 @@
         <keys dataType="Array" type="System.Object[]" id="3907889231">
           <item dataType="Type" id="432579118" value="Duality.Components.Transform" />
           <item dataType="Type" id="1149553866" value="Duality.Components.Renderers.AnimSpriteRenderer" />
-          <item dataType="Type" id="3678856094" value="Duality_.Explosion" />
+          <item dataType="Type" id="3678856094" value="StuffShooter.Components.Explosion" />
         </keys>
         <values dataType="Array" type="System.Object[]" id="1177355360">
           <item dataType="ObjectRef">885011396</item>
           <item dataType="ObjectRef">3683099021</item>
-          <item dataType="ObjectRef">2081566004</item>
+          <item dataType="ObjectRef">180958731</item>
         </values>
       </body>
     </compMap>
