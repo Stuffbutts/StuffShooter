@@ -96,7 +96,7 @@
   <Contents Count="6">
     <Content ID="0" PersistString="Duality.Editor.Plugins.ProjectView.ProjectFolderView" AutoHidePortion="0.196585742399566" IsHidden="False" IsFloat="False" />
     <Content ID="1" PersistString="Duality.Editor.Plugins.SceneView.SceneView" AutoHidePortion="0.196585742399566" IsHidden="False" IsFloat="False" />
-    <Content ID="2" PersistString="Duality.Editor.Plugins.LogView.LogView" AutoHidePortion="0.297286720013993" IsHidden="False" IsFloat="False" />
+    <Content ID="2" PersistString="Duality.Editor.Plugins.LogView.LogView" AutoHidePortion="0.131149153876427" IsHidden="False" IsFloat="False" />
     <Content ID="3" PersistString="Duality.Editor.Plugins.CamView.CamView" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
     <Content ID="4" PersistString="Duality.Editor.Plugins.ObjectInspector.ObjectInspector" AutoHidePortion="0.213821593376765" IsHidden="False" IsFloat="False" />
     <Content ID="5" PersistString="Duality.Editor.Plugins.HelpAdvisor.HelpAdvisor" AutoHidePortion="0.213821593376765" IsHidden="False" IsFloat="False" />
