@@ -62,6 +62,21 @@
           <ExpandedNodes>
             <NodeID>PropertiesDuality.Resources.Scene/SceneDuality.Resources.Scene/</NodeID>
             <NodeID>PropertiesDuality.GameObject/HudController_Duality.Controllers.HudController/</NodeID>
+            <NodeID>PropertiesDuality.GameObject/Player_Duality.Components.Ships.Player/</NodeID>
+            <NodeID>PropertiesDuality.Resources.Prefab/PrefabDuality.Resources.Prefab/</NodeID>
+            <NodeID>PropertiesDuality.GameObject/BulletController_Duality.Controllers.BulletController/</NodeID>
+            <NodeID>PropertiesDuality.GameObject/Enemy_Duality.Components.Ships.Enemy/</NodeID>
+            <NodeID>PropertiesDuality.GameObject/CollisionController_Duality.Controllers.CollisionController/</NodeID>
+            <NodeID>PropertiesDuality.Resources.AudioData/AudioDataDuality.Resources.AudioData/</NodeID>
+            <NodeID>PropertiesDuality.Resources.AudioData/AudioDataDuality.Resources.AudioData/AudioDataDuality.Resources.AudioData/</NodeID>
+            <NodeID>PropertiesDuality.Resources.AudioData/Import / Export SettingsDuality.Resources.AudioData/</NodeID>
+            <NodeID>PropertiesDuality.Resources.Material/MaterialDuality.Resources.Material/</NodeID>
+            <NodeID>PropertiesDuality.Resources.Material/MaterialDuality.Resources.Material/Duality.Drawing.BatchInfo/</NodeID>
+            <NodeID>PropertiesDuality.Resources.Pixmap/PixmapDuality.Resources.Pixmap/</NodeID>
+            <NodeID>PropertiesDuality.Resources.Pixmap/PixmapDuality.Resources.Pixmap/PixmapDuality.Resources.Pixmap/</NodeID>
+            <NodeID>PropertiesDuality.Resources.Pixmap/Import / Export SettingsDuality.Resources.Pixmap/</NodeID>
+            <NodeID>PropertiesDuality.GameObject/AnimSpriteRendererDuality.Components.Renderers.AnimSpriteRenderer/</NodeID>
+            <NodeID>PropertiesDuality.GameObject/Explosion_Duality.Components.Explosion/</NodeID>
           </ExpandedNodes>
         </ExpandState>
       </ObjectInspector>
@@ -77,11 +92,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--DockPanel configuration file. Author: Weifen Luo, all rights reserved.-->
 <!--!!! AUTOMATICALLY GENERATED FILE. DO NOT MODIFY !!!-->
-<DockPanel FormatVersion="1.0" DockLeftPortion="0.213821593376765" DockRightPortion="0.196585742399566" DockTopPortion="0.25" DockBottomPortion="0.131149153876427" ActiveDocumentPane="2" ActivePane="0">
+<DockPanel FormatVersion="1.0" DockLeftPortion="0.213821593376765" DockRightPortion="0.196585742399566" DockTopPortion="0.25" DockBottomPortion="0.131149153876427" ActiveDocumentPane="2" ActivePane="2">
   <Contents Count="6">
     <Content ID="0" PersistString="Duality.Editor.Plugins.ProjectView.ProjectFolderView" AutoHidePortion="0.196585742399566" IsHidden="False" IsFloat="False" />
     <Content ID="1" PersistString="Duality.Editor.Plugins.SceneView.SceneView" AutoHidePortion="0.196585742399566" IsHidden="False" IsFloat="False" />
-    <Content ID="2" PersistString="Duality.Editor.Plugins.LogView.LogView" AutoHidePortion="0.321625344352617" IsHidden="False" IsFloat="False" />
+    <Content ID="2" PersistString="Duality.Editor.Plugins.LogView.LogView" AutoHidePortion="0.297286720013993" IsHidden="False" IsFloat="False" />
     <Content ID="3" PersistString="Duality.Editor.Plugins.CamView.CamView" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
     <Content ID="4" PersistString="Duality.Editor.Plugins.ObjectInspector.ObjectInspector" AutoHidePortion="0.213821593376765" IsHidden="False" IsFloat="False" />
     <Content ID="5" PersistString="Duality.Editor.Plugins.HelpAdvisor.HelpAdvisor" AutoHidePortion="0.213821593376765" IsHidden="False" IsFloat="False" />
