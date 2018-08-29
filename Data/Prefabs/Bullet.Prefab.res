@@ -30,31 +30,6 @@
           <vel dataType="Struct" type="Duality.Vector3" />
           <velAbs dataType="Struct" type="Duality.Vector3" />
         </item>
-        <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="2149996350">
-          <active dataType="Bool">true</active>
-          <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
-            <A dataType="Byte">255</A>
-            <B dataType="Byte">255</B>
-            <G dataType="Byte">255</G>
-            <R dataType="Byte">255</R>
-          </colorTint>
-          <customMat />
-          <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
-          <gameobj dataType="ObjectRef">681377070</gameobj>
-          <offset dataType="Int">0</offset>
-          <pixelGrid dataType="Bool">false</pixelGrid>
-          <rect dataType="Struct" type="Duality.Rect">
-            <H dataType="Float">28</H>
-            <W dataType="Float">5</W>
-            <X dataType="Float">-2.5</X>
-            <Y dataType="Float">-14</Y>
-          </rect>
-          <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
-          <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
-            <contentPath dataType="String">Data\Sprites\bulletOne.Material.res</contentPath>
-          </sharedMat>
-          <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
-        </item>
         <item dataType="Struct" type="Duality.Components.Physics.RigidBody" id="216306558">
           <active dataType="Bool">true</active>
           <allowParent dataType="Bool">false</allowParent>
@@ -129,7 +104,32 @@
             <_size dataType="Int">1</_size>
           </shapes>
         </item>
-        <item dataType="Struct" type="StuffShooter.Controllers.BulletController" id="498852611">
+        <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="2149996350">
+          <active dataType="Bool">true</active>
+          <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+            <A dataType="Byte">255</A>
+            <B dataType="Byte">255</B>
+            <G dataType="Byte">255</G>
+            <R dataType="Byte">255</R>
+          </colorTint>
+          <customMat />
+          <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
+          <gameobj dataType="ObjectRef">681377070</gameobj>
+          <offset dataType="Int">0</offset>
+          <pixelGrid dataType="Bool">false</pixelGrid>
+          <rect dataType="Struct" type="Duality.Rect">
+            <H dataType="Float">28</H>
+            <W dataType="Float">5</W>
+            <X dataType="Float">-2.5</X>
+            <Y dataType="Float">-14</Y>
+          </rect>
+          <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+          <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+            <contentPath dataType="String">Data\Sprites\bulletOne.Material.res</contentPath>
+          </sharedMat>
+          <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+        </item>
+        <item dataType="Struct" type="_Duality.Controllers.BulletController" id="3224324032">
           <_collisionInstance />
           <_lifetimeCounter dataType="Float">0</_lifetimeCounter>
           <_rigidBody dataType="ObjectRef">216306558</_rigidBody>
@@ -157,13 +157,13 @@
           <item dataType="Type" id="2961619558" value="Duality.Components.Transform" />
           <item dataType="Type" id="1446566714" value="Duality.Components.Renderers.SpriteRenderer" />
           <item dataType="Type" id="2005337830" value="Duality.Components.Physics.RigidBody" />
-          <item dataType="Type" id="2642624698" value="StuffShooter.Controllers.BulletController" />
+          <item dataType="Type" id="2642624698" value="_Duality.Controllers.BulletController" />
         </keys>
         <values dataType="Array" type="System.Object[]" id="1485217400">
           <item dataType="ObjectRef">738654288</item>
           <item dataType="ObjectRef">2149996350</item>
           <item dataType="ObjectRef">216306558</item>
-          <item dataType="ObjectRef">498852611</item>
+          <item dataType="ObjectRef">3224324032</item>
         </values>
       </body>
     </compMap>

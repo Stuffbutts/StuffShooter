@@ -3,7 +3,7 @@ using Duality.Components;
 using Duality.Components.Renderers;
 using Duality.Resources;
 
-namespace StuffShooter.Components
+namespace _Duality.Components
 {
     [RequiredComponent(typeof(AnimSpriteRenderer)), RequiredComponent(typeof(Transform))]
     public class Explosion : Component, ICmpUpdatable, ICmpInitializable

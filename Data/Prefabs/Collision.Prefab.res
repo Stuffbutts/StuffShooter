@@ -54,7 +54,7 @@
           </sharedMat>
           <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
         </item>
-        <item dataType="Struct" type="StuffShooter.Controllers.CollisionController" id="229878147">
+        <item dataType="Struct" type="_Duality.Controllers.CollisionController" id="399970732">
           <_x003C_Animation_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
             <contentPath dataType="String">Data\Sprites\explosion.Material.res</contentPath>
           </_x003C_Animation_x003E_k__BackingField>
@@ -73,12 +73,12 @@
         <keys dataType="Array" type="System.Object[]" id="2228916443">
           <item dataType="Type" id="1584401046" value="Duality.Components.Transform" />
           <item dataType="Type" id="3848139994" value="Duality.Components.Renderers.AnimSpriteRenderer" />
-          <item dataType="Type" id="3499012918" value="StuffShooter.Controllers.CollisionController" />
+          <item dataType="Type" id="3499012918" value="_Duality.Controllers.CollisionController" />
         </keys>
         <values dataType="Array" type="System.Object[]" id="1974807912">
           <item dataType="ObjectRef">2370836616</item>
           <item dataType="ObjectRef">873956945</item>
-          <item dataType="ObjectRef">229878147</item>
+          <item dataType="ObjectRef">399970732</item>
         </values>
       </body>
     </compMap>

@@ -3,11 +3,11 @@ using Duality.Components;
 using Duality.Components.Physics;
 using Duality.Input;
 
-namespace StuffShooter.Components.Ships
+namespace _Duality.Components.Ships
 {
     [RequiredComponent(typeof(RigidBody)), RequiredComponent(typeof(Transform))]
     public class Player : Ship, ICmpUpdatable
-    {
+    { 
         void ICmpUpdatable.OnUpdate()
         {
             FiringDelayCounter += Time.TimeMult;
@@ -19,7 +19,8 @@ namespace StuffShooter.Components.Ships
                 if (DualityApp.Keyboard[Key.Space])
                 {
                     Fire(transform, body);
-                } else if (DualityApp.Keyboard[Key.X])
+                }
+                else if (DualityApp.Keyboard[Key.X])
                 {
                     CanReload = false;
                     Fire(transform, body, RapidFireMultiplier);

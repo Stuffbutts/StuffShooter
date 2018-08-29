@@ -1,6 +1,6 @@
 ﻿using Duality;
 
-namespace StuffShooter
+namespace _Duality
 {
 	/// <summary>
 	/// Defines a Duality core plugin.

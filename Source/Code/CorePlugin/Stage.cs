@@ -1,9 +1,9 @@
 ﻿using Duality;
 using Duality.Components;
 using Duality.Components.Physics;
-using StuffShooter.Components.Ships;
+using _Duality.Components.Ships;
 
-namespace StuffShooter
+namespace _Duality
 {
     [RequiredComponent(typeof(RigidBody)), RequiredComponent(typeof(Transform))]
     public class Stage: Component, ICmpCollisionListener
@@ -30,11 +30,6 @@ namespace StuffShooter
         }
 
         public void OnCollisionSolve(Component sender, CollisionEventArgs args)
-        {
-            
-        }
-
-        public void updateAmmoText()
         {
             
         }

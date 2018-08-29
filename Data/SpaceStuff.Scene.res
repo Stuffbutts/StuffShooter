@@ -32,10 +32,6 @@
             <vel dataType="Struct" type="Duality.Vector3" />
             <velAbs dataType="Struct" type="Duality.Vector3" />
           </item>
-          <item dataType="Struct" type="Duality.Components.SoundListener" id="3534231931">
-            <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">1501579404</gameobj>
-          </item>
           <item dataType="Struct" type="Duality.Components.Camera" id="3047965881">
             <active dataType="Bool">true</active>
             <farZ dataType="Float">10000</farZ>
@@ -68,6 +64,10 @@
             <perspective dataType="Enum" type="Duality.Drawing.PerspectiveMode" name="Parallax" value="1" />
             <priority dataType="Int">0</priority>
             <visibilityMask dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="All" value="4294967295" />
+          </item>
+          <item dataType="Struct" type="Duality.Components.SoundListener" id="3534231931">
+            <active dataType="Bool">true</active>
+            <gameobj dataType="ObjectRef">1501579404</gameobj>
           </item>
         </_items>
         <_size dataType="Int">3</_size>
@@ -224,31 +224,6 @@
                   <vel dataType="Struct" type="Duality.Vector3" />
                   <velAbs dataType="Struct" type="Duality.Vector3" />
                 </item>
-                <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="3079604573">
-                  <active dataType="Bool">true</active>
-                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
-                    <A dataType="Byte">255</A>
-                    <B dataType="Byte">255</B>
-                    <G dataType="Byte">255</G>
-                    <R dataType="Byte">255</R>
-                  </colorTint>
-                  <customMat />
-                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
-                  <gameobj dataType="ObjectRef">1610985293</gameobj>
-                  <offset dataType="Int">0</offset>
-                  <pixelGrid dataType="Bool">false</pixelGrid>
-                  <rect dataType="Struct" type="Duality.Rect">
-                    <H dataType="Float">38</H>
-                    <W dataType="Float">43</W>
-                    <X dataType="Float">-21.5</X>
-                    <Y dataType="Float">-19</Y>
-                  </rect>
-                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
-                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
-                    <contentPath dataType="String">Data\Sprites\ShipOne.Material.res</contentPath>
-                  </sharedMat>
-                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
-                </item>
                 <item dataType="Struct" type="Duality.Components.Physics.RigidBody" id="1145914781">
                   <active dataType="Bool">true</active>
                   <allowParent dataType="Bool">false</allowParent>
@@ -397,14 +372,41 @@
                     <_size dataType="Int">3</_size>
                   </shapes>
                 </item>
-                <item dataType="Struct" type="StuffShooter.Components.Ships.Player" id="2387869849">
+                <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="3079604573">
+                  <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">255</B>
+                    <G dataType="Byte">255</G>
+                    <R dataType="Byte">255</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
+                  <gameobj dataType="ObjectRef">1610985293</gameobj>
+                  <offset dataType="Int">0</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">38</H>
+                    <W dataType="Float">43</W>
+                    <X dataType="Float">-21.5</X>
+                    <Y dataType="Float">-19</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Sprites\ShipOne.Material.res</contentPath>
+                  </sharedMat>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+                </item>
+                <item dataType="Struct" type="_Duality.Components.Ships.Player" id="753518306">
                   <_ammo dataType="Int">10</_ammo>
                   <_health dataType="Int">3</_health>
                   <_reloadDelayCounter dataType="Float">0</_reloadDelayCounter>
                   <_x003C_BulletPrefab_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
                     <contentPath dataType="String">Data\Prefabs\Bullet.Prefab.res</contentPath>
                   </_x003C_BulletPrefab_x003E_k__BackingField>
-                  <_x003C_ExplosionPrefab_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]" />
+                  <_x003C_ExplosionPrefab_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
+                    <contentPath dataType="String">Data\Prefabs\Explosion.Prefab.res</contentPath>
+                  </_x003C_ExplosionPrefab_x003E_k__BackingField>
                   <_x003C_FiringDelay_x003E_k__BackingField dataType="Float">20</_x003C_FiringDelay_x003E_k__BackingField>
                   <_x003C_MaxAmmo_x003E_k__BackingField dataType="Int">10</_x003C_MaxAmmo_x003E_k__BackingField>
                   <_x003C_MaxHealth_x003E_k__BackingField dataType="Int">3</_x003C_MaxHealth_x003E_k__BackingField>
@@ -412,7 +414,7 @@
                   <_x003C_ReloadDelay_x003E_k__BackingField dataType="Float">20</_x003C_ReloadDelay_x003E_k__BackingField>
                   <_x003C_RotationForce_x003E_k__BackingField dataType="Float">0.001</_x003C_RotationForce_x003E_k__BackingField>
                   <active dataType="Bool">true</active>
-                  <CanReload dataType="Bool">false</CanReload>
+                  <CanReload dataType="Bool">true</CanReload>
                   <FiringDelayCounter dataType="Float">0</FiringDelayCounter>
                   <FiringOffset dataType="Struct" type="Duality.Vector3">
                     <X dataType="Float">0</X>
@@ -431,13 +433,13 @@
                   <item dataType="ObjectRef">1934267052</item>
                   <item dataType="ObjectRef">2477173862</item>
                   <item dataType="Type" id="3330489334" value="Duality.Components.Physics.RigidBody" />
-                  <item dataType="Type" id="2130031642" value="StuffShooter.Components.Ships.Player" />
+                  <item dataType="Type" id="2130031642" value="_Duality.Components.Ships.Player" />
                 </keys>
                 <values dataType="Array" type="System.Object[]" id="2196883528">
                   <item dataType="ObjectRef">1668262511</item>
                   <item dataType="ObjectRef">3079604573</item>
                   <item dataType="ObjectRef">1145914781</item>
-                  <item dataType="ObjectRef">2387869849</item>
+                  <item dataType="ObjectRef">753518306</item>
                 </values>
               </body>
             </compMap>
@@ -482,31 +484,6 @@
                   <scaleAbs dataType="Float">1</scaleAbs>
                   <vel dataType="Struct" type="Duality.Vector3" />
                   <velAbs dataType="Struct" type="Duality.Vector3" />
-                </item>
-                <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="1409645676">
-                  <active dataType="Bool">true</active>
-                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
-                    <A dataType="Byte">255</A>
-                    <B dataType="Byte">255</B>
-                    <G dataType="Byte">255</G>
-                    <R dataType="Byte">255</R>
-                  </colorTint>
-                  <customMat />
-                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
-                  <gameobj dataType="ObjectRef">4235993692</gameobj>
-                  <offset dataType="Int">0</offset>
-                  <pixelGrid dataType="Bool">false</pixelGrid>
-                  <rect dataType="Struct" type="Duality.Rect">
-                    <H dataType="Float">38</H>
-                    <W dataType="Float">43</W>
-                    <X dataType="Float">-21.5</X>
-                    <Y dataType="Float">-19</Y>
-                  </rect>
-                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
-                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
-                    <contentPath dataType="String">Data\Sprites\ShipOne.Material.res</contentPath>
-                  </sharedMat>
-                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
                 </item>
                 <item dataType="Struct" type="Duality.Components.Physics.RigidBody" id="3770923180">
                   <active dataType="Bool">true</active>
@@ -656,11 +633,38 @@
                     <_size dataType="Int">3</_size>
                   </shapes>
                 </item>
-                <item dataType="Struct" type="StuffShooter.Components.Ships.Enemy" id="1927990847">
+                <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="1409645676">
+                  <active dataType="Bool">true</active>
+                  <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+                    <A dataType="Byte">255</A>
+                    <B dataType="Byte">255</B>
+                    <G dataType="Byte">255</G>
+                    <R dataType="Byte">255</R>
+                  </colorTint>
+                  <customMat />
+                  <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
+                  <gameobj dataType="ObjectRef">4235993692</gameobj>
+                  <offset dataType="Int">0</offset>
+                  <pixelGrid dataType="Bool">false</pixelGrid>
+                  <rect dataType="Struct" type="Duality.Rect">
+                    <H dataType="Float">38</H>
+                    <W dataType="Float">43</W>
+                    <X dataType="Float">-21.5</X>
+                    <Y dataType="Float">-19</Y>
+                  </rect>
+                  <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+                  <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+                    <contentPath dataType="String">Data\Sprites\ShipOne.Material.res</contentPath>
+                  </sharedMat>
+                  <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+                </item>
+                <item dataType="Struct" type="_Duality.Components.Ships.Enemy" id="2696380564">
                   <_ammo dataType="Int">10</_ammo>
                   <_health dataType="Int">3</_health>
                   <_reloadDelayCounter dataType="Float">0</_reloadDelayCounter>
-                  <_x003C_BulletPrefab_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]" />
+                  <_x003C_BulletPrefab_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
+                    <contentPath dataType="String">Data\Prefabs\Bullet.Prefab.res</contentPath>
+                  </_x003C_BulletPrefab_x003E_k__BackingField>
                   <_x003C_ExplosionPrefab_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
                     <contentPath dataType="String">Data\Prefabs\Explosion.Prefab.res</contentPath>
                   </_x003C_ExplosionPrefab_x003E_k__BackingField>
@@ -671,7 +675,7 @@
                   <_x003C_ReloadDelay_x003E_k__BackingField dataType="Float">20</_x003C_ReloadDelay_x003E_k__BackingField>
                   <_x003C_RotationForce_x003E_k__BackingField dataType="Float">0.001</_x003C_RotationForce_x003E_k__BackingField>
                   <active dataType="Bool">true</active>
-                  <CanReload dataType="Bool">false</CanReload>
+                  <CanReload dataType="Bool">true</CanReload>
                   <FiringDelayCounter dataType="Float">0</FiringDelayCounter>
                   <FiringOffset dataType="Struct" type="Duality.Vector3">
                     <X dataType="Float">0</X>
@@ -690,13 +694,13 @@
                   <item dataType="ObjectRef">1934267052</item>
                   <item dataType="ObjectRef">2477173862</item>
                   <item dataType="ObjectRef">3330489334</item>
-                  <item dataType="Type" id="1891352960" value="StuffShooter.Components.Ships.Enemy" />
+                  <item dataType="Type" id="1891352960" value="_Duality.Components.Ships.Enemy" />
                 </keys>
                 <values dataType="Array" type="System.Object[]" id="2360296762">
                   <item dataType="ObjectRef">4293270910</item>
                   <item dataType="ObjectRef">1409645676</item>
                   <item dataType="ObjectRef">3770923180</item>
-                  <item dataType="ObjectRef">1927990847</item>
+                  <item dataType="ObjectRef">2696380564</item>
                 </values>
               </body>
             </compMap>
@@ -973,18 +977,24 @@
       <parent />
       <prefabLink />
     </item>
-    <item dataType="Struct" type="Duality.GameObject" id="218339765">
+    <item dataType="Struct" type="Duality.GameObject" id="381478404">
       <active dataType="Bool">true</active>
       <children />
-      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2135978695">
-        <_items dataType="Array" type="Duality.Component[]" id="2859866830" length="4">
-          <item dataType="Struct" type="StuffShooter.Controllers.HudController" id="2706836509">
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="4049001146">
+        <_items dataType="Array" type="Duality.Component[]" id="14397952" length="4">
+          <item dataType="Struct" type="_Duality.Controllers.HudController" id="3120673997">
             <_resolution dataType="Struct" type="Duality.Vector2">
               <X dataType="Float">1131</X>
-              <Y dataType="Float">383</Y>
+              <Y dataType="Float">894</Y>
             </_resolution>
             <_x003C_BoundRadius_x003E_k__BackingField dataType="Float">0</_x003C_BoundRadius_x003E_k__BackingField>
             <_x003C_Enemy_x003E_k__BackingField dataType="ObjectRef">4235993692</_x003C_Enemy_x003E_k__BackingField>
+            <_x003C_EnemyTitleColorRgba_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
+              <A dataType="Byte">255</A>
+              <B dataType="Byte">0</B>
+              <G dataType="Byte">0</G>
+              <R dataType="Byte">255</R>
+            </_x003C_EnemyTitleColorRgba_x003E_k__BackingField>
             <_x003C_LabelColorRgba_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
               <A dataType="Byte">255</A>
               <B dataType="Byte">255</B>
@@ -994,38 +1004,37 @@
             <_x003C_LabelFont_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Font]]">
               <contentPath dataType="String">Default:Font:GenericMonospace8</contentPath>
             </_x003C_LabelFont_x003E_k__BackingField>
-            <_x003C_LabelPosition_x003E_k__BackingField dataType="Enum" type="StuffShooter.Controllers.LabelPositions" name="TopLeft" value="0" />
             <_x003C_Player_x003E_k__BackingField dataType="ObjectRef">1610985293</_x003C_Player_x003E_k__BackingField>
-            <_x003C_TitleColorRgba_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
+            <_x003C_PlayerTitleColorRgba_x003E_k__BackingField dataType="Struct" type="Duality.Drawing.ColorRgba">
               <A dataType="Byte">255</A>
               <B dataType="Byte">255</B>
               <G dataType="Byte">255</G>
               <R dataType="Byte">0</R>
-            </_x003C_TitleColorRgba_x003E_k__BackingField>
+            </_x003C_PlayerTitleColorRgba_x003E_k__BackingField>
             <_x003C_TitleFont_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Font]]">
               <contentPath dataType="String">Default:Font:GenericMonospace10</contentPath>
             </_x003C_TitleFont_x003E_k__BackingField>
             <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">218339765</gameobj>
+            <gameobj dataType="ObjectRef">381478404</gameobj>
           </item>
         </_items>
         <_size dataType="Int">1</_size>
       </compList>
-      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2543034112" surrogate="true">
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1610066874" surrogate="true">
         <header />
         <body>
-          <keys dataType="Array" type="System.Object[]" id="2869159277">
-            <item dataType="Type" id="3679558886" value="StuffShooter.Controllers.HudController" />
+          <keys dataType="Array" type="System.Object[]" id="2669453056">
+            <item dataType="Type" id="3204182684" value="_Duality.Controllers.HudController" />
           </keys>
-          <values dataType="Array" type="System.Object[]" id="3045358328">
-            <item dataType="ObjectRef">2706836509</item>
+          <values dataType="Array" type="System.Object[]" id="3048618446">
+            <item dataType="ObjectRef">3120673997</item>
           </values>
         </body>
       </compMap>
       <compTransform />
       <identifier dataType="Struct" type="System.Guid" surrogate="true">
         <header>
-          <data dataType="Array" type="System.Byte[]" id="3854940807">sjkoOJoUCUafNisLPAI9Bw==</data>
+          <data dataType="Array" type="System.Byte[]" id="4248992156">dKdWJ0elCEq/ZKC46YjcGg==</data>
         </header>
         <body />
       </identifier>

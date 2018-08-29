@@ -1,11 +1,10 @@
-﻿using System;
-using Duality;
+﻿using Duality;
 using Duality.Components;
 using Duality.Components.Physics;
 using Duality.Resources;
-using StuffShooter.Components.Ships;
+using _Duality.Components.Ships;
 
-namespace StuffShooter.Controllers
+namespace _Duality.Controllers
 {
     [RequiredComponent(typeof(Transform)), RequiredComponent(typeof(RigidBody))]
     public class BulletController : Component, ICmpUpdatable, ICmpInitializable, ICmpCollisionListener

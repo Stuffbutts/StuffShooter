@@ -8,9 +8,9 @@ using Duality.Components;
 using Duality.Components.Physics;
 using Duality.Editor;
 using Duality.Resources;
-using StuffShooter.Controllers;
+using _Duality.Controllers;
 
-namespace StuffShooter.Components.Ships
+namespace _Duality.Components.Ships
 {
     [RequiredComponent(typeof(RigidBody)), RequiredComponent(typeof(Transform))]
     public class Ship : Component, ICmpUpdatable, ICmpInitializable
@@ -54,6 +54,7 @@ namespace StuffShooter.Components.Ships
             _health = MaxHealth;
             _reloadDelayCounter = FiringDelayCounter;
             _ammo = MaxAmmo;
+            CanReload = true;
         }
 
         public void AddDamage(int amount)
