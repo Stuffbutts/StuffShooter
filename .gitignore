@@ -53,3 +53,6 @@ Source/Code/EditorPlugin/bin/
 Source/Code/EditorPlugin/obj/
 Source/Code/EditorPlugin/GamePlugin.core.xml
 Source/Code/ProjectPlugins.v12.suo
+/.vs/slnx.sqlite
+/Temp
+/Source/Code/.vs/**

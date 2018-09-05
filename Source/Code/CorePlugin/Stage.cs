@@ -1,12 +1,16 @@
-﻿using Duality;
+﻿using System;
+using System.Linq;
+using Duality;
 using Duality.Components;
 using Duality.Components.Physics;
+using Duality.Components.Renderers;
+using Duality.Resources;
 using _Duality.Components.Ships;
 
 namespace _Duality
 {
     [RequiredComponent(typeof(RigidBody)), RequiredComponent(typeof(Transform))]
-    public class Stage: Component, ICmpCollisionListener
+    public class Stage: Component, ICmpCollisionListener, ICmpInitializable
     { 
         public void OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
@@ -17,7 +21,7 @@ namespace _Duality
                 var ship = instance.GetComponent<Ship>();
                 if (ship != null)
                 {
-                    Log.Game.Write($"{collidedWith.UserTag} Collided with a Ship");
+                    //Log.Game.Write($"{collidedWith.UserTag} Collided with a Ship");
 
                     transformShipLocation(collidedWith, instance);
                 }
@@ -33,35 +37,80 @@ namespace _Duality
         {
             
         }
-
+        
         private void transformShipLocation(ShapeInfo collidedWith, GameObject shipGameObject)
         {
-            var body = shipGameObject.GetComponent<RigidBody>();
-            var bodyLength = body.BoundRadius;
-            var transform = shipGameObject.GetComponent<Transform>();
+            var shipBody = shipGameObject.GetComponent<RigidBody>();
+            var shipBodyBoundRadius = shipBody.BoundRadius;
+            var shipTransform = shipGameObject.GetComponent<Transform>();
 
-            var tag = collidedWith.UserTag;
             var coordinates = collidedWith.AABB;
-
-            if (body.LinearVelocity.X < 0 && tag == 0)
-            {
-                transform.Pos = Vector3.UnitX * -(transform.Pos.X + bodyLength) + Vector3.UnitY * transform.Pos.Y;
-            }
-            else if (body.LinearVelocity.X > 0 && tag == 1)
-            {
-                transform.Pos = Vector3.UnitX * -(transform.Pos.X - bodyLength) + Vector3.UnitY * transform.Pos.Y;
-            }
-
-            if (body.LinearVelocity.Y < 0 && tag == 2)
-            {
-                transform.Pos = Vector3.UnitY * -(transform.Pos.Y + bodyLength) + Vector3.UnitX * transform.Pos.X;
-            }
-            else if (body.LinearVelocity.Y > 0 && tag == 3)
-            {
-                transform.Pos = Vector3.UnitY * -(transform.Pos.Y - bodyLength) + Vector3.UnitX * transform.Pos.X;
-            }
-
             
+            if (shipBody.LinearVelocity.X < 0 && coordinates.LeftX > shipTransform.Pos.X + shipBodyBoundRadius)
+            {
+                shipTransform.Pos = Vector3.UnitX * (-shipTransform.Pos.X - shipBodyBoundRadius / 2) + Vector3.UnitY * shipTransform.Pos.Y;
+            }
+            else if (shipBody.LinearVelocity.X > 0 && coordinates.RightX < shipTransform.Pos.X - shipBodyBoundRadius)
+            {
+                shipTransform.Pos = Vector3.UnitX * (-shipTransform.Pos.X + shipBodyBoundRadius / 2) + Vector3.UnitY * shipTransform.Pos.Y;
+            }
+
+            if (shipBody.LinearVelocity.Y < 0 && coordinates.TopY > shipTransform.Pos.Y + shipBodyBoundRadius)
+            {
+                shipTransform.Pos = Vector3.UnitX * shipTransform.Pos.X + Vector3.UnitY * (-shipTransform.Pos.Y - shipBodyBoundRadius / 2);
+            }
+            else if (shipBody.LinearVelocity.Y > 0 && coordinates.TopY < shipTransform.Pos.Y - shipBodyBoundRadius)
+            {
+                shipTransform.Pos = Vector3.UnitX * shipTransform.Pos.X + Vector3.UnitY * (-shipTransform.Pos.Y + shipBodyBoundRadius / 2);
+            }
+        }
+
+        public void OnInit(InitContext context)
+        {
+            if (context == InitContext.Activate)
+            {
+                var res = DualityApp.TargetResolution;
+                Rect rect = new Rect(res);
+
+                var body = GameObj.GetComponent<RigidBody>();
+                var transform = GameObj.GetComponent<Transform>();
+                transform.Scale = 1.33f;
+
+                Vector2 tlPoint = new Vector2(-rect.Size.X/2, -rect.Size.Y/2);
+                Vector2 trPoint = new Vector2(rect.Size.X/2, -rect.Size.Y/2);
+                Vector2 brPoint = new Vector2(rect.Size.X/2, rect.Size.Y/2);
+                Vector2 blPoint = new Vector2(-rect.Size.X / 2, rect.Size.Y / 2);
+
+                ShapeInfo shape = new LoopShapeInfo
+                {
+                    Vertices = new[]
+                    {
+                        tlPoint,
+                        trPoint,
+                        brPoint,
+                        blPoint
+                    }
+                };
+
+                shape.IsSensor = true;
+
+                if (!body.Shapes.Any()) body.AddShape(shape);
+            }
+        }
+
+        private void ClearShapes()
+        {
+            var rigidBody = GameObj.GetComponent<RigidBody>();
+
+            rigidBody.ClearShapes();
+        }
+
+        public void OnShutdown(ShutdownContext context)
+        {
+            if (context == ShutdownContext.Deactivate)
+            {
+                ClearShapes();
+            }
         }
     }
 }

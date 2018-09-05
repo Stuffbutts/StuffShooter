@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Duality;
 using Duality.Drawing;
 using Duality.Resources;
@@ -18,8 +19,6 @@ namespace _Duality.Controllers
     {
         private Vector2 _resolution;
 
-       
-
         public GameObject Player { get; set; }
         public GameObject Enemy { get; set; }
         public ContentRef<Font> LabelFont { get; set; } = Font.GenericMonospace8;
@@ -29,12 +28,12 @@ namespace _Duality.Controllers
         public ColorRgba PlayerTitleColorRgba { get; set; } = new ColorRgba(0, Byte.MaxValue, Byte.MaxValue); // Super-light blue
         public ColorRgba EnemyTitleColorRgba { get; set; } = new ColorRgba(Byte.MaxValue, 0, 0); // RED
 
-
         public void OnInit(InitContext context)
         {
             if (context == InitContext.Activate)
             {
                 _resolution = DualityApp.TargetResolution;
+                //Log.Game.Write(_resolution.ToString());
             }
         }
 
@@ -64,6 +63,16 @@ namespace _Duality.Controllers
                 default:
                     return new Vector2(20f, 20f);
             }
+        }
+
+        static bool OutOfView(Vector2 pos)
+        {
+            return false;
+        }
+
+        static void ShiftShipPosition(GameObject gameObject)
+        {
+            
         }
 
         public void Draw(IDrawDevice device)
@@ -112,5 +121,6 @@ namespace _Duality.Controllers
         }
 
         public float BoundRadius { get; }
+        
     }
 }
