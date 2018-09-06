@@ -56,3 +56,9 @@ Source/Code/ProjectPlugins.v12.suo
 /.vs/slnx.sqlite
 /Temp
 /Source/Code/.vs/**
+Data/CameraController
+Data/FlapOrDie
+Data/SceneTransitions
+Source/Code/AdamsLair.Duality.Samples*
+Source/Code/hsnabn.duality-samples*
+high.score

@@ -73,9 +73,13 @@ namespace _Duality.Components.Ships
             if (!IsAlive())
             {
                 var transform = GameObj.GetComponent<Transform>();
-                var instance = ExplosionPrefab.Res.Instantiate(transform.Pos);
 
-                Scene.Current.AddObject(instance);
+                if (ExplosionPrefab != null)
+                {
+                    var instance = ExplosionPrefab.Res.Instantiate(transform.Pos);
+                    Scene.Current.AddObject(instance);
+                }
+
                 Scene.Current.RemoveObject(GameObj);
             }
         }

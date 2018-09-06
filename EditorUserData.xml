@@ -41,12 +41,12 @@
     </Plugin>
     <Plugin id="LogView">
       <LogView>
-        <ShowMessages>false</ShowMessages>
+        <ShowMessages>true</ShowMessages>
         <ShowWarnings>true</ShowWarnings>
         <ShowErrors>true</ShowErrors>
         <ShowCore>true</ShowCore>
-        <ShowEditor>false</ShowEditor>
-        <ShowGame>false</ShowGame>
+        <ShowEditor>true</ShowEditor>
+        <ShowGame>true</ShowGame>
         <AutoClear>true</AutoClear>
         <PauseOnError>true</PauseOnError>
       </LogView>
@@ -77,6 +77,11 @@
             <NodeID>PropertiesDuality.Resources.Pixmap/Import / Export SettingsDuality.Resources.Pixmap/</NodeID>
             <NodeID>PropertiesDuality.GameObject/AnimSpriteRendererDuality.Components.Renderers.AnimSpriteRenderer/</NodeID>
             <NodeID>PropertiesDuality.GameObject/Explosion_Duality.Components.Explosion/</NodeID>
+            <NodeID>PropertiesDuality.GameObject/RigidBodyRendererDuality.Components.Renderers.RigidBodyRenderer/</NodeID>
+            <NodeID>PropertiesDuality.GameObject/RigidBodyDuality.Components.Physics.RigidBody/</NodeID>
+            <NodeID>PropertiesDuality.Components.Physics.ChainShapeInfo/VerticesDuality.Vector2[]/</NodeID>
+            <NodeID>PropertiesDuality.Components.Physics.LoopShapeInfo/VerticesDuality.Vector2[]/</NodeID>
+            <NodeID>PropertiesDuality.GameObject/TransformDuality.Components.Transform/</NodeID>
           </ExpandedNodes>
         </ExpandState>
       </ObjectInspector>
@@ -92,14 +97,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--DockPanel configuration file. Author: Weifen Luo, all rights reserved.-->
 <!--!!! AUTOMATICALLY GENERATED FILE. DO NOT MODIFY !!!-->
-<DockPanel FormatVersion="1.0" DockLeftPortion="0.213821593376765" DockRightPortion="0.196585742399566" DockTopPortion="0.25" DockBottomPortion="0.131149153876427" ActiveDocumentPane="2" ActivePane="2">
+<DockPanel FormatVersion="1.0" DockLeftPortion="0.192988260043432" DockRightPortion="0.196585742399566" DockTopPortion="0.25" DockBottomPortion="0.227223534041716" ActiveDocumentPane="5" ActivePane="-1">
   <Contents Count="6">
     <Content ID="0" PersistString="Duality.Editor.Plugins.ProjectView.ProjectFolderView" AutoHidePortion="0.196585742399566" IsHidden="False" IsFloat="False" />
     <Content ID="1" PersistString="Duality.Editor.Plugins.SceneView.SceneView" AutoHidePortion="0.196585742399566" IsHidden="False" IsFloat="False" />
-    <Content ID="2" PersistString="Duality.Editor.Plugins.LogView.LogView" AutoHidePortion="0.131149153876427" IsHidden="False" IsFloat="False" />
-    <Content ID="3" PersistString="Duality.Editor.Plugins.CamView.CamView" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
-    <Content ID="4" PersistString="Duality.Editor.Plugins.ObjectInspector.ObjectInspector" AutoHidePortion="0.213821593376765" IsHidden="False" IsFloat="False" />
-    <Content ID="5" PersistString="Duality.Editor.Plugins.HelpAdvisor.HelpAdvisor" AutoHidePortion="0.213821593376765" IsHidden="False" IsFloat="False" />
+    <Content ID="2" PersistString="Duality.Editor.Plugins.LogView.LogView" AutoHidePortion="0.227223534041716" IsHidden="False" IsFloat="False" />
+    <Content ID="3" PersistString="Duality.Editor.Plugins.ObjectInspector.ObjectInspector" AutoHidePortion="0.192988260043432" IsHidden="False" IsFloat="False" />
+    <Content ID="4" PersistString="Duality.Editor.Plugins.HelpAdvisor.HelpAdvisor" AutoHidePortion="0.192988260043432" IsHidden="False" IsFloat="False" />
+    <Content ID="5" PersistString="Duality.Editor.Plugins.CamView.CamView" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
   </Contents>
   <Panes Count="6">
     <Pane ID="0" DockState="DockRight" ActiveContent="1">
@@ -107,27 +112,27 @@
         <Content ID="0" RefID="1" />
       </Contents>
     </Pane>
-    <Pane ID="1" DockState="DockBottomAutoHide" ActiveContent="2">
+    <Pane ID="1" DockState="DockBottom" ActiveContent="2">
       <Contents Count="1">
         <Content ID="0" RefID="2" />
       </Contents>
     </Pane>
-    <Pane ID="2" DockState="Document" ActiveContent="3">
+    <Pane ID="2" DockState="DockLeft" ActiveContent="3">
       <Contents Count="1">
         <Content ID="0" RefID="3" />
       </Contents>
     </Pane>
-    <Pane ID="3" DockState="DockLeft" ActiveContent="4">
-      <Contents Count="1">
-        <Content ID="0" RefID="4" />
-      </Contents>
-    </Pane>
-    <Pane ID="4" DockState="DockRight" ActiveContent="0">
+    <Pane ID="3" DockState="DockRight" ActiveContent="0">
       <Contents Count="1">
         <Content ID="0" RefID="0" />
       </Contents>
     </Pane>
-    <Pane ID="5" DockState="DockLeft" ActiveContent="5">
+    <Pane ID="4" DockState="DockLeft" ActiveContent="4">
+      <Contents Count="1">
+        <Content ID="0" RefID="4" />
+      </Contents>
+    </Pane>
+    <Pane ID="5" DockState="Document" ActiveContent="5">
       <Contents Count="1">
         <Content ID="0" RefID="5" />
       </Contents>
@@ -136,19 +141,19 @@
   <DockWindows>
     <DockWindow ID="0" DockState="Document" ZOrderIndex="0">
       <NestedPanes Count="1">
-        <Pane ID="0" RefID="2" PrevPane="-1" Alignment="Right" Proportion="0.5" />
+        <Pane ID="0" RefID="5" PrevPane="-1" Alignment="Right" Proportion="0.5" />
       </NestedPanes>
     </DockWindow>
     <DockWindow ID="1" DockState="DockLeft" ZOrderIndex="1">
       <NestedPanes Count="2">
-        <Pane ID="0" RefID="3" PrevPane="-1" Alignment="Bottom" Proportion="0.5" />
-        <Pane ID="1" RefID="5" PrevPane="3" Alignment="Bottom" Proportion="0.123280423280423" />
+        <Pane ID="0" RefID="2" PrevPane="-1" Alignment="Bottom" Proportion="0.5" />
+        <Pane ID="1" RefID="4" PrevPane="2" Alignment="Bottom" Proportion="0.123280423280423" />
       </NestedPanes>
     </DockWindow>
     <DockWindow ID="2" DockState="DockRight" ZOrderIndex="2">
       <NestedPanes Count="2">
-        <Pane ID="0" RefID="4" PrevPane="-1" Alignment="Bottom" Proportion="0.5" />
-        <Pane ID="1" RefID="0" PrevPane="4" Alignment="Top" Proportion="0.5" />
+        <Pane ID="0" RefID="3" PrevPane="-1" Alignment="Bottom" Proportion="0.5" />
+        <Pane ID="1" RefID="0" PrevPane="3" Alignment="Top" Proportion="0.5" />
       </NestedPanes>
     </DockWindow>
     <DockWindow ID="3" DockState="DockTop" ZOrderIndex="4">

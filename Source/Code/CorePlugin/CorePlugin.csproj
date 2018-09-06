@@ -62,12 +62,16 @@
     <Compile Include="Controllers\BulletController.cs" />
     <Compile Include="Controllers\CollisionController.cs" />
     <Compile Include="Controllers\HudController.cs" />
+    <Compile Include="Controllers\SpawnController.cs" />
     <Compile Include="CorePlugin.cs" />
     <Compile Include="Components\Explosion.cs" />
     <Compile Include="Components\Ships\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Components\Ships\Ship.cs" />
     <Compile Include="Stage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FriendlySpawn.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <PropertyGroup>
